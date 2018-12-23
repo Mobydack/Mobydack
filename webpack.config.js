@@ -6,7 +6,14 @@ module.exports = {
         app: './src/app.js'
     },
     module: {
-
+        rules: [
+            //babel
+            {
+                test: /\.(js|jsx)$/,
+                exclude: /node_modules/,
+                laoder: 'babel-loader'
+            }
+        ]
     },
     plugins: [
         new HtmlWebpackPlugin({
