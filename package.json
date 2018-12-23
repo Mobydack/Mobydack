@@ -4,7 +4,7 @@
   "description": "You can use the [editor on GitHub](https://github.com/Mobydack/Mobydack/edit/master/README.md) to maintain and preview the content for your website in Markdown files.",
   "main": "index.js",
   "scripts": {
-    "start:dev": "webpack-dev-server --color --config webpack.dev.config.js",
+    "start:dev": "webpack-dev-server --color --hot --config webpack.dev.config.js",
     "build:prod": "webpack --config webpack.prod.config.js",
     "build:dev": "webpack --config webpack.dev.config.js",
     "watch": "webpack --watch --config webpack.dev.config.js"
@@ -19,7 +19,13 @@
     "url": "https://github.com/Mobydack/Mobydack/issues"
   },
   "homepage": "https://github.com/Mobydack/Mobydack#readme",
-  "dependencies": {},
+  "dependencies": {
+    "immutable": "^4.0.0-rc.12",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-redux": "^6.0.0",
+    "redux": "^4.0.1"
+  },
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.2.3",
