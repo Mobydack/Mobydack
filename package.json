@@ -1,0 +1,24 @@
+{
+  "name": "mobydack",
+  "version": "0.0.1",
+  "description": "You can use the [editor on GitHub](https://github.com/Mobydack/Mobydack/edit/master/README.md) to maintain and preview the content for your website in Markdown files.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mobydack/Mobydack.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mobydack/Mobydack/issues"
+  },
+  "homepage": "https://github.com/Mobydack/Mobydack#readme",
+  "dependencies": {
+    "webpack": "^4.28.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.13"
+  }
+}
