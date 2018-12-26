@@ -1,18 +1,26 @@
 const path = require('path');
-const MiniCssExtractPlugin = reuire('mini-css-extract-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const devMode = process.env.NODE_ENV === 'production';
-
+const devMode = process.env.NODE_ENV !== 'production';
+console.log(devMode)
 module.exports = {
     entry: {
         app: './src/app.js'
     },
     resolve: {
-        extensions: ['.wasm', '.mjs', '.js', '.json', '.jsx', '.styl'],
+        extensions: [
+            '.wasm',
+            '.mjs',
+            '.js',
+            '.json',
+            '.jsx',
+            '.styl'
+        ],
         alias: {
-            components: path.resolve(__dirname, 'src/components'),
             compound: path.resolve(__dirname, 'src/components/compound'),
             easy: path.resolve(__dirname, 'src/components/easy'),
+            components: path.resolve(__dirname, 'src/components'),
+            style: path.resolve(__dirname, 'src/style/components'),
             reducers: path.resolve(__dirname, 'src/reducers/')
         },
     },
@@ -31,8 +39,7 @@ module.exports = {
                 use: [
                     devMode ? 'style-loader' : MiniCssExtractPlugin,
                     'css-loader',
-                    'postcss-loader',
-                    'stylus-laoder'
+                    'stylus-loader'
                 ]
             }
         ]
