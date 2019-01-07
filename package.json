@@ -21,6 +21,7 @@
   "homepage": "https://github.com/Mobydack/Mobydack#readme",
   "dependencies": {
     "classnames": "^2.2.6",
+    "github-api": "^3.0.0",
     "immutable": "^4.0.0-rc.12",
     "prop-types": "^15.6.2",
     "react": "^16.7.0",
