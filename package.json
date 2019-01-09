@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/Mobydack/Mobydack#readme",
   "dependencies": {
+    "@storybook/react": "^4.1.6",
     "classnames": "^2.2.6",
     "github-api": "^3.0.0",
     "immutable": "^4.0.0-rc.12",
