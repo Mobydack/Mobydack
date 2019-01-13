@@ -1,0 +1,23 @@
+size = 2px
+.separator {
+	&-container {
+		display: flex;
+		width: 100%;
+		&&--v {
+			flex-direction: row;
+			.separator-element {
+				width: size;
+			}
+		}
+		&&--h {
+			flex-direction: column;
+			height: size;
+			.separator-element {
+				size: size;
+			}
+		}
+	}
+	&-element {
+		background-color: #333;
+	}
+}

@@ -1,5 +1,5 @@
 const merge = require('webpack-merge');
 const mainConfig = require('./webpack.config.js');
-module.axports = merge(mainConfig, {
+module.exports = merge(mainConfig, {
     mode: 'production'
 });

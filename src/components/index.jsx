@@ -1,26 +1,35 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-import Navigator from 'compound/navigator';
-import Content from 'compound/content';
-import SeparatorContainer from 'compound/separatorContainer';
+import { setActive } from 'actions/index'
 
-import Separator from 'easy/separator';
-import Theme from 'easy/theme';
+import Navigation from './navigation'
+import { SeparatorContainer, Separator } from './separator'
 
-import style from 'style/app.styl';
-
-export default class Application extends React.PureComponent {
-    render() {
-        return(
-            <Theme name="default">
-                <div className="app">
-                    <SeparatorContainer orientation="v">
-                        <Navigator />
-                        <Separator />
-                        <Content />
-                    </ SeparatorContainer>
-                </div>
-            </ Theme>
-        );
-    }
+class Application extends React.PureComponent {
+	handlerClick = () => {
+		let id = this.props.state.initialReducer.get('active');
+		this.props.setActive(++id);
+	}
+	render() {
+		return(
+			<React.Fragment>
+				<SeparatorContainer type='v' className='default'>
+					<Navigation />
+					<Separator className='custom-separator'/>
+					<div>
+						This is Content
+					</div>
+				</SeparatorContainer>
+			</React.Fragment>
+		);
+	}
 }
+
+const mapStateToProps = state => ({
+	state: state
+});
+
+const mapDispatchToProps = { setActive };
+
+export default connect(mapStateToProps, mapDispatchToProps)(Application);

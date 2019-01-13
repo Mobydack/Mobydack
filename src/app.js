@@ -1,22 +1,24 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
+import createSagaMiddleware from 'redux-saga';
 
 import Application from 'components/index';
-import './style/main.styl';
-import reducer from 'reducers/index';
+import './style/main';
+import reducers from 'reducers/combineReducers';
+import rootSaga from './sagas/rootSaga';
 
-import DB from './lib/DataBase';
-
+const sagaMiddleware = createSagaMiddleware();
 const container = document.querySelector('#app');
-const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = createStore(reducers, composeEnhancers(applyMiddleware(sagaMiddleware)));
 
-DB.getPost();
+sagaMiddleware.run(rootSaga);
 
 ReactDOM.render(
-    <Provider store={store}>
-        <Application />
-    </Provider>,
-    container
+	<Provider store={store}>
+		<Application />
+	</Provider>,
+	container
 );
