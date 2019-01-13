@@ -7,7 +7,9 @@
     "start:dev": "webpack-dev-server --color --hot --config webpack.dev.config.js",
     "build:prod": "webpack --config webpack.prod.config.js",
     "build:dev": "webpack --config webpack.dev.config.js",
-    "watch": "webpack --watch --config webpack.dev.config.js"
+    "watch": "webpack --watch --config webpack.dev.config.js",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "repository": {
     "type": "git",
@@ -34,6 +36,10 @@
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.2.3",
     "@babel/preset-react": "^7.0.0",
+    "@storybook/addon-actions": "^4.1.6",
+    "@storybook/addon-links": "^4.1.6",
+    "@storybook/addons": "^4.1.6",
+    "@storybook/react": "^4.1.6",
     "babel-loader": "^8.0.4",
     "css-loader": "^2.0.2",
     "eslint": "^5.11.0",
