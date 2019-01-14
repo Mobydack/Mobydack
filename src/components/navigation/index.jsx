@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import { connect } from 'react-redux';
 
-import { setActivePost, requestPost } from 'actions/navigation'
+import { setActivePost, requestPost } from 'actions/post'
 
 import { Collection, CollectionItem } from 'components/collections';
 import style from './style'
@@ -24,7 +24,7 @@ class Navigation extends React.PureComponent {
 		this.props.setActivePost(id)
 	}
 	render() {
-		const { posts, activePostID } = this.props;
+		const { posts, activePost } = this.props;
 		const itemActiveClass = 'collection-item--active';
 		return (
 			<div className={ this.generationClassName() }>
@@ -40,7 +40,7 @@ class Navigation extends React.PureComponent {
 							<CollectionItem
 								key={ el.id }
 								onClick={ () => { this.setActive(el.id) } }
-								active={ el.id === activePostID }
+								active={ el.id === activePost.body.id }
 								classNameActive='collection-item--active'
 							>
 								{ el.title }
@@ -55,7 +55,7 @@ class Navigation extends React.PureComponent {
 
 const mapStateToProps = state => ({
 	posts: state.navigation.get('posts'),
-	activePostID: state.navigation.get('active'), 
+	activePost: state.navigation.get('activePOST'), 
 });
 
 const mapDispatchToProps = {

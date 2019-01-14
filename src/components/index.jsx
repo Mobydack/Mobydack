@@ -1,10 +1,12 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import { connect } from 'react-redux/';
 
-import { setActive } from 'actions/index'
+import { setActive } from 'actions/index';
 
-import Navigation from './navigation'
-import { SeparatorContainer, Separator } from './separator'
+import Navigation from './navigation';
+import Content from './content';
+import EventContainer from './event';
+import { SeparatorContainer, Separator } from './separator';
 
 class Application extends React.PureComponent {
 	handlerClick = () => {
@@ -13,15 +15,13 @@ class Application extends React.PureComponent {
 	}
 	render() {
 		return(
-			<React.Fragment>
+			<div className='main-wrapper'>
 				<SeparatorContainer type='v' className='default'>
 					<Navigation />
 					<Separator className='custom-separator'/>
-					<div>
-						This is Content
-					</div>
+					<Content />
 				</SeparatorContainer>
-			</React.Fragment>
+			</div>
 		);
 	}
 }

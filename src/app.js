@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import createSagaMiddleware from 'redux-saga';
 
 import Application from 'components/index';
+import EventContainer from 'components/event';
 import './style/main';
 import reducers from 'reducers/combineReducers';
 import rootSaga from './sagas/rootSaga';
@@ -18,7 +19,9 @@ sagaMiddleware.run(rootSaga);
 
 ReactDOM.render(
 	<Provider store={store}>
-		<Application />
+		<EventContainer>
+			<Application />
+		</EventContainer>
 	</Provider>,
 	container
 );
