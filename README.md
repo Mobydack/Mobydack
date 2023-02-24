@@ -1,16 +1,13 @@
-### Hi there 👋
+# Hello World!
+[I'm](https://mobydack.github.io/about/) a highly skilled full-stack developer with expertise in both front-end and back-end development.
+I'm proficient in JavaScript (Node.JS, Browser API), CSS and enjoy staying up-to-date with the latest technologies and best practices.
 
-<!--
-**Mobydack/Mobydack** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+## Links
+* [My website](https://mobydack.github.io/about)
 
-Here are some ideas to get you started:
+## Stats
+### GitHub
+[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=mobydack&show_icons=true&theme=merko)](https://github.com/anuraghazra/github-readme-stats)
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+### Languages
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=mobydack&theme=merko&layout=compact&langs_count=10&hide_title=true)
