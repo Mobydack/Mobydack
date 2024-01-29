@@ -1,5 +1,5 @@
 # Hello World!
-[I'm](https://mobydack.github.io/about/) a highly skilled full-stack developer with expertise in both front-end and back-end development.
+[I'm](https://mobydack.github.io/about/) full-stack developer with expertise in both front-end and back-end development.
 I'm proficient in JavaScript (Node.JS, Browser API), CSS and enjoy staying up-to-date with the latest technologies and best practices.
 
 ## Links
